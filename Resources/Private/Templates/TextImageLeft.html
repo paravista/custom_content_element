@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section id="c{data.uid}" class="ce-text-image-left layout-{data.layout}">
+
+    <div class="ce-inner">
+
+        <header class="header-content">
+
+            <h2>{data.header}</h2>
+
+            <f:if condition="{data.subheader}">
+                <h3>{data.subheader}</h3>
+            </f:if>
+
+        </header>
+
+        <div class="row">
+
+            <div class="image-container">
+                <f:for each="{files}" as="file" iteration="iterator">
+                    <f:if condition="{iterator.isFirst}">
+                        <figure>
+                            <f:if condition="{file.properties.link}">
+                                <f:then>
+                                    <f:link.typolink parameter="{file.properties.link}">
+                                        <f:image image="{file}" height="{data.imageheight}" maxWidth="600" alt="{file.properties.alt}" title="{file.properties.title}"/>
+                                    </f:link.typolink>
+                                </f:then>
+                                <f:else>
+                                    <f:image image="{file}" height="{data.imageheight}" maxWidth="600" alt="{file.properties.alt}" title="{file.properties.title}"/>
+                                </f:else>
+                            </f:if>
+                            <f:if condition="{file.properties.description}">
+                                <figcaption>{file.properties.description}</figcaption>
+                            </f:if>
+                        </figure>
+                    </f:if>
+                </f:for>
+            </div>
+
+            <div class="bodytext">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</html>

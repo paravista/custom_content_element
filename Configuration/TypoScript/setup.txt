@@ -1,0 +1,23 @@
+# Setup TS
+
+# set pathes
+lib.fluidContent.templateRootPaths.50 = EXT:custom_content_element/Resources/Private/Templates/
+lib.fluidContent.partialRootPaths.50 = EXT:custom_content_element/Resources/Private/Partials/
+lib.fluidContent.layoutRootPaths.50 = EXT:custom_content_element/Resources/Private/Layouts/
+
+
+tt_content {
+
+	# rendering definition for custom CE "text image left"
+	text_image_left < lib.fluidContent
+	text_image_left {
+		templateName = TextImageLeft
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = assets
+			}
+		}
+	}
+
+}
