@@ -3,7 +3,7 @@
       data-namespace-typo3-fluid="true">
 
     <div class="bodytext">
-        <f:format.crop maxCharacters="100">{bodytext}</f:format.crop>
+        <f:format.crop maxCharacters="100"><f:format.stripTags>{bodytext}</f:format.stripTags></f:format.crop>
     </div>
 
     <v:content.resources.fal table="tt_content" field="assets" uid="{uid}" as="files">
