@@ -15,6 +15,7 @@ tt_content {
 		dataProcessing {
 			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
 			10 {
+				if.isTrue.field = assets
 				references.fieldName = assets
 			}
 		}
