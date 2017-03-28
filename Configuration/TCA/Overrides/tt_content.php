@@ -21,7 +21,7 @@ call_user_func(function () {
 
 
     // Option to set an icon for content elements in overview page mode 
-    #$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['text_image_left'] = $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['textmedia'];
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['text_image_left'] = 'mimetypes-x-content-text-media';
 
 
     // Custom CE Text Image Left
