@@ -10,7 +10,7 @@
  * "version" and "dependencies" must not be touched!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
 	'title' => 'Custom Content Element',
 	'description' => 'A skeleton for a custom content element based on fluid styled content',
 	'category' => 'plugin',
@@ -21,15 +21,14 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '0.2.0',
-	'constraints' => array(
-		'depends' => array(
-			'typo3' => '7.6.0-7.6.99',
-			'fluid_styled_content' => '',
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
-);
+	'version' => '0.3.0',
+	'constraints' => [
+		'depends' => [
+			'typo3' => '8.7.0-9.5.99',
+        ],
+		'conflicts' => [
+        ],
+		'suggests' => [
+        ],
+    ],
+];
