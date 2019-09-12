@@ -26,9 +26,11 @@ call_user_func(function () {
     // Custom CE Text Image Left
     $GLOBALS['TCA']['tt_content']['types']['text_image_left'] = [
         'showitem' => '
-				--palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+			--palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
 				header, subheader, header_layout,
 				bodytext;' . $frontendLanguageFilePrefix . 'bodytext_formlabel,
+			--div--;' . $frontendLanguageFilePrefix . 'tabs.images,
+				image,
 			--div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
 			--div--;' . $frontendLanguageFilePrefix . 'tabs.access,
