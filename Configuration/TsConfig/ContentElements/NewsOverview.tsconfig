@@ -1,0 +1,15 @@
+# Custom CE news_overview
+
+mod.wizards.newContentElement.wizardItems.special {
+	elements {
+		news_overview {
+			iconIdentifier = content-menu-thumbnail
+			title = LLL:EXT:custom_content_element/Resources/Private/Language/locallang.xlf:ce.news_overview.title
+			description = LLL:EXT:custom_content_element/Resources/Private/Language/locallang.xlf:ce.news_overview.description
+			tt_content_defValues {
+				CType = news_overview
+			}
+		}
+	}
+	show := addToList(news_overview)
+}

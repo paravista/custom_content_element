@@ -1,0 +1,23 @@
+# Custom CE image_grid
+
+mod.wizards.newContentElement.wizardItems.common {
+	elements {
+		image_grid {
+			iconIdentifier = content-image
+			title = LLL:EXT:custom_content_element/Resources/Private/Language/locallang.xlf:ce.image_grid.title
+			description = LLL:EXT:custom_content_element/Resources/Private/Language/locallang.xlf:ce.image_grid.description
+			tt_content_defValues {
+				CType = image_grid
+			}
+		}
+	}
+	show := addToList(image_grid)
+}
+
+
+# Define Preview Fluid Templates for Backend Preview
+/*
+mod.web_layout.tt_content.preview {
+	image_grid = EXT:custom_content_element/Resources/Private/Templates/BackendPreview/General.html
+}
+*/

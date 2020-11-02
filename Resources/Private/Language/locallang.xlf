@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-17T11:00:33Z" product-name="custom_content_elements">
+		<header/>
+		<body>
+			<trans-unit id="ce.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="ce.text_image.title">
+				<source>Text with image</source>
+			</trans-unit>
+			<trans-unit id="ce.text_image.description">
+				<source>Text with image on left or right side</source>
+			</trans-unit>
+			<trans-unit id="ce.image_grid.title">
+				<source>Image Grid</source>
+			</trans-unit>
+			<trans-unit id="ce.image_grid.description">
+				<source>Image Grid with 3 items in one row with an image, a text and a link.</source>
+			</trans-unit>
+			<trans-unit id="ce.news_overview.title">
+				<source>News overview</source>
+			</trans-unit>
+			<trans-unit id="ce.news_overview.description">
+				<source>List news with linked image and title as well as teaser text in grid style.</source>
+			</trans-unit>
+			<trans-unit id="ce.contact_list.title">
+				<source>Contact List</source>
+			</trans-unit>
+			<trans-unit id="ce.contact_list.description">
+				<source>Contact list with name, title, phone, email and image.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

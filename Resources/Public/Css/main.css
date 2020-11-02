@@ -1,0 +1,165 @@
+/* CSS for Custom Content Elements */
+
+
+.flex-row {
+    display: flex;
+}
+
+
+/* CE Text */
+.ce-text.ce-layout-2 .bodytext {
+    column-count: 2;
+}
+
+
+
+/* CE Text with Image */
+
+.ce-text-image-image {
+    width: 50%;
+}
+
+.ce-text-image-text {
+    width: 50%;
+}
+
+.ce-image-position-26 .ce-text-image-image {
+    padding-right: 40px;
+}
+
+.ce-image-position-26 .ce-text-image-text {
+    padding-left: 40px;
+}
+
+.ce-image-position-25 .ce-text-image-image {
+    padding-left: 40px;
+    order: 2;
+}
+
+.ce-image-position-25 .ce-text-image-text {
+    padding-right: 40px;
+}
+
+
+
+/* CE Image Grid */
+.ce-image-grid-images {
+    margin: -50px;
+}
+
+.ce-image-grid-image-item {
+    width: calc(100% / 3);
+    padding: 50px;
+}
+
+.ce-image-grid-image-item figcaption {
+    padding: 20px;
+    text-align: center;
+}
+
+.ce-image-grid-image-item .more-link {
+    display: block;
+    width: 100px;
+    text-decoration: none;
+    border: 1px solid #444444;
+    background: grey;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+
+
+/* Menu Subpages */
+.menu-subpages ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: -20px;
+}
+
+.menu-subpages li {
+    width: calc(100% / 4);
+    padding: 20px;
+}
+
+.menu-subpages h3 {
+    margin: 0;
+}
+
+.menu-subpages h3 a {
+    display: block;
+    padding: 8px 10px;
+    color: white;
+    background: #555555;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page-abstract {
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+
+/* News List */
+.news-list ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: -20px;
+}
+
+.news-list li {
+    width: calc(100% / 4);
+    padding: 20px;
+}
+
+.news-list h3 {
+    margin: 0;
+}
+
+.news-list h3 a {
+    display: block;
+    text-decoration: none;
+}
+
+.news-list-date {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.news-list-text{
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+
+/* Contact List */
+.contact-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-list li {
+    margin-bottom: 40px;
+}
+
+.contact-list-item {
+    display: flex;
+}
+
+.contact-list-image {
+    width: 140px;
+}
+
+.contact-list-text {
+    padding-top: 20px;
+}

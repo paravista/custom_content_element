@@ -1,0 +1,17 @@
+{
+    "name": "paravista/custom-content-element",
+    "type": "typo3-cms-extension",
+    "description": "Samples for a custom content element based on fluid styled content.",
+    "version": "1.3.0",
+    "authors": [
+        {
+            "name": "Michael Hitzler",
+            "email": "mail@paravista.de",
+            "homepage": "https://www.paravista.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^10.4.*"
+    }
+}

@@ -1,0 +1,7 @@
+# Setup TS
+
+# add content elements
+@import 'EXT:custom_content_element/Configuration/TypoScript/ContentElements/*.typoscript'
+
+# add CSS Styles
+page.includeCSS.custom_content_element = EXT:custom_content_element/Resources/Public/Css/main.css

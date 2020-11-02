@@ -1,6 +1,6 @@
 <?php
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
 	'custom_content_element',
-    'Configuration/PageTS/CustomContentElement.tsconfig',
+    'Configuration/TsConfig/ContentElements.tsconfig',
 	'Custom Content Element Config'
 );

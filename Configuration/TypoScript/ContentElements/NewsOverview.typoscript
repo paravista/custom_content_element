@@ -1,0 +1,38 @@
+# Custom CE text_video
+tt_content {
+	news_overview < lib.contentElement
+	news_overview {
+		templateName = NewsOverview
+		/* only supported < v10
+		extbase {
+			pluginName = News
+			controllerName = CustomContentElement
+			controllerExtensionName = CustomContentElement
+			controllerActionName = list
+		}
+		*/
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+			10 {
+				table = pages
+				#pidInList.data = flexform:pi_flexform:settings.startingpoint
+				#recursive.data = flexform:pi_flexform:settings.recursive
+				#pidInList = 57,10,11
+				pidInList.field = pages
+				#recursive = 1
+				selectFields = pages.*
+				languageField = sys_language_uid
+				orderBy = lastUpdated DESC
+				#groupBy = pages.uid
+				as = news
+
+				dataProcessing {
+					10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+					10 {
+						references.fieldName = media
+					}
+				}
+			}
+		}
+	}
+}

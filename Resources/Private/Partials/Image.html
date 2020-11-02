@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<figure>
+	<f:if condition="{image.properties.link}">
+		<f:then>
+			<f:link.typolink parameter="{image.properties.link}">
+				<f:media file="{image}" width="{maxImageWidth}m" alt="{image.alternative}" title="{image.title}" loading="{settings.media.lazyLoading}"/>
+			</f:link.typolink>
+		</f:then>
+		<f:else>
+			<f:if condition="{clickenlarge}">
+				<f:then>
+					<a href="{f:uri.image(image: file, maxWidth: '1920')}" title="{image.properties.title}" class="lightbox">
+						<f:media file="{image}" width="{maxImageWidth}m" alt="{image.alternative}" title="{image.title}" loading="{settings.media.lazyLoading}"/>
+					</a>
+				</f:then>
+				<f:else>
+					<f:media file="{image}" width="{maxImageWidth}m" alt="{image.alternative}" title="{image.title}" loading="{settings.media.lazyLoading}"/>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+	<f:if condition="{image.description}">
+		<figcaption>
+			<f:format.nl2br>{image.description}</f:format.nl2br>
+		</figcaption>
+	</f:if>
+</figure>
+</html>

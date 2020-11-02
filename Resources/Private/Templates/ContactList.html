@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section id="c{data.uid}" class="ce-contact-list ce-uid-{data.uid} ce-layout-{data.layout}">
+	<div class="inner">
+		<f:if condition="{data.header}">
+			<h1>{data.header}</h1>
+		</f:if>
+		<f:if condition="{contacts}">
+			<div class="contact-list">
+				<ul>
+					<f:for each="{contacts}" as="contact">
+						<li>
+							<div class="contact-list-item">
+								<figure class="contact-list-image">
+									<f:if condition="{contact.images.0}">
+										<f:image image="{contact.images.0}" maxWidth="240" alt="{contact.data.name}" title="{contact.data.name}" />
+									</f:if>
+								</figure>
+								<div class="contact-list-text">
+									Name: {contact.data.name} <br>
+									Titel: {contact.data.title} <br>
+									Telefone: {contact.data.phone} <br>
+									E-Mail: <f:link.email email="{contact.data.email}" />
+
+								</div>
+							</div>
+						</li>
+					</f:for>
+				</ul>
+			</div>
+		</f:if>
+	</div>
+</section>
+</html>

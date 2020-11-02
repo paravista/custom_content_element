@@ -1,0 +1,21 @@
+# Content Elements
+
+# unset standard elements
+mod.wizards.newContentElement.wizardItems.common.show =
+
+# add content elements
+@import 'EXT:custom_content_element/Configuration/TsConfig/ContentElements/*.tsconfig'
+
+# Remove standard CTypes from select
+TCEFORM.tt_content.CType.removeItems = textpic,textmedia,image,header
+
+# Image orientation - remove anything but left and right
+TCEFORM.tt_content.imageorient.removeItems = 0,1,2,8,9,10,17,18
+
+# Set header layouts
+TCEFORM.tt_content.header_layout {
+    altLabels.0 = Überschrift 1
+    altLabels.2 = Überschrift 2
+    altLabels.3 = Überschrift 3
+    removeItems = 1,4,5,100
+}

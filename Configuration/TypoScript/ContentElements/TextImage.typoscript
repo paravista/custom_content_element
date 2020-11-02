@@ -1,0 +1,14 @@
+# Custom CE text_image
+tt_content {
+	text_image < lib.contentElement
+	text_image {
+		templateName = TextImage
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = image
+				as = images
+			}
+		}
+	}
+}

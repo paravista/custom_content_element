@@ -1,0 +1,14 @@
+# Custom CE image_grid
+tt_content {
+	image_grid < lib.contentElement
+	image_grid {
+		templateName = ImageGrid
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = image
+				as = images
+			}
+		}
+	}
+}

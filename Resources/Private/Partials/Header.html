@@ -1,0 +1,19 @@
+<html lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<header class="header-content">
+	<f:if condition="{data.header_layout} == 0">
+		<h1>{data.header}</h1>
+	</f:if>
+	<f:if condition="{data.header_layout} == 1">
+		<h2>{data.header}</h2>
+	</f:if>
+	<f:if condition="{data.header_layout} == 2">
+		<h2>{data.header}</h2>
+	</f:if>
+	<f:if condition="{data.header_layout} == 3">
+		<h3>{data.header}</h3>
+	</f:if>
+	<f:if condition="{data.header_layout} == 4">
+		<h4>{data.header}</h4>
+	</f:if>
+</header>
+</html>

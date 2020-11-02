@@ -1,0 +1,15 @@
+# Custom CE contact_list
+
+mod.wizards.newContentElement.wizardItems.special {
+	elements {
+		contact_list {
+			iconIdentifier = content-news
+			title = LLL:EXT:custom_content_element/Resources/Private/Language/locallang.xlf:ce.contact_list.title
+			description = LLL:EXT:custom_content_element/Resources/Private/Language/locallang.xlf:ce.contact_list.description
+			tt_content_defValues {
+				CType = contact_list
+			}
+		}
+	}
+	show := addToList(contact_list)
+}

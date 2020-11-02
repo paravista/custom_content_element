@@ -1,0 +1,22 @@
+# Custom CE text_image
+
+mod.wizards.newContentElement.wizardItems.common {
+	elements {
+		text_image {
+			iconIdentifier = content-beside-text-img-left
+			title = LLL:EXT:custom_content_element/Resources/Private/Language/locallang.xlf:ce.text_image.title
+			description = LLL:EXT:custom_content_element/Resources/Private/Language/locallang.xlf:ce.text_image.description
+			tt_content_defValues {
+				CType = text_image
+			}
+		}
+	}
+	show := addToList(text_image)
+}
+
+
+# Define Preview Fluid Templates for Backend Preview
+
+#mod.web_layout.tt_content.preview {
+	#text_image = EXT:custom_content_element/Resources/Private/Templates/BackendPreview/TextImage.html
+#}

@@ -1,0 +1,10 @@
+# Constants
+
+# set pathes for content elements
+styles {
+	templates {
+		layoutRootPath = EXT:custom_content_element/Resources/Private/Layouts/
+		partialRootPath = EXT:custom_content_element/Resources/Private/Partials/
+		templateRootPath = EXT:custom_content_element/Resources/Private/Templates/
+	}
+}

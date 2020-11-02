@@ -1,0 +1,26 @@
+# Custom CE text_video
+tt_content {
+	contact_list < lib.contentElement
+	contact_list {
+		templateName = ContactList
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+			10 {
+				table = tx_contact
+				pidInList.field = pages
+				#recursive = 1
+				selectFields = tx_contact.*
+				orderBy = name ASC
+				as = contacts
+
+				dataProcessing {
+					10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+					10 {
+						references.fieldName = image
+						as = images
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section id="c{data.uid}" class="ce-news-overview ce-uid-{data.uid} ce-layout-{data.layout}">
+	<div class="inner">
+		<f:if condition="{data.header}">
+			<h1>{data.header}</h1>
+		</f:if>
+		<f:if condition="{news}">
+			<div class="news-list">
+				<ul>
+					<f:for each="{news}" as="newsItem" iteration="iterator">
+						<li>
+							<div class="news-list-item">
+								<figure class="news-list-image">
+									<f:link.page pageUid="{newsItem.data.uid}" title="{newsItem.data.title}" class="more-link">
+										<f:if condition="{newsItem.files.0}">
+											<f:image image="{newsItem.files.0}" maxWidth="320" alt="{newsItem.data.title}" title="{newsItem.data.title}" />
+										</f:if>
+									</f:link.page>
+								</figure>
+								<div class="news-list-text">
+									<h3><f:link.page pageUid="{newsItem.data.uid}" title="{newsItem.data.title}" class="more-link">{newsItem.data.title}</f:link.page></h3>
+									<div class="news-list-date"><f:format.date format="d.m.Y">{newsItem.data.lastUpdated}</f:format.date></div>
+									<p>
+										<f:format.html>{newsItem.data.abstract}</f:format.html>
+									</p>
+									<f:link.page pageUid="{newsItem.data.uid}" title="{newsItem.data.title}" class="more-link">
+										mehr &raquo;
+									</f:link.page>
+								</div>
+							</div>
+						</li>
+					</f:for>
+				</ul>
+			</div>
+		</f:if>
+	</div>
+</section>
+</html>

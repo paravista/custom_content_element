@@ -1,0 +1,17 @@
+<html lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section id="c{data.uid}" class="ce-text ce-uid-{data.uid} ce-layout-{data.layout} {f:if(condition: data.space_before_class, then: ' ce-space-before-{data.space_before_class}')} {f:if(condition: data.space_after_class, then: ' ce-space-after-{data.space_after_class}')}">
+
+	<div class="ce-inner">
+
+		<f:if condition="{data.header}">
+			<f:render partial="Header" arguments="{_all}" />
+		</f:if>
+
+		<div class="bodytext">
+			<f:format.html>{data.bodytext}</f:format.html>
+		</div>
+
+	</div>
+
+</section>
+</html>

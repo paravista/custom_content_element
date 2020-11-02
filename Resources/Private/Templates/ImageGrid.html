@@ -1,0 +1,28 @@
+<html lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section id="c{data.uid}" class="ce-image-grid ce-uid-{data.uid}  {f:if(condition: data.space_before_class, then: ' ce-space-before-{data.space_before_class}')} {f:if(condition: data.space_after_class, then: ' ce-space-after-{data.space_after_class}')}">
+
+	<div class="ce-inner">
+
+        <f:if condition="{data.header}">
+            <f:render partial="Header" arguments="{_all}" />
+        </f:if>
+
+        <f:if condition="{images}">
+            <div class="ce-image-grid-images flex-row">
+                <f:for each="{images}" as="image">
+                    <div class="ce-image-grid-image-item">
+                        <f:render partial="Image" arguments="{image: image, maxImageWidth: 600, clickenlarge: data.image_zoom}" />
+                        <f:if condition="{image.properties.link}">
+                            <f:link.typolink parameter="{image.properties.link}" class="more-link">
+                                mehr &raquo;
+                            </f:link.typolink>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+
+	</div>
+
+</section>
+</html>
