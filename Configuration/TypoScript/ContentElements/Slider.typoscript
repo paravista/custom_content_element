@@ -1,0 +1,14 @@
+# Custom CE image_grid
+tt_content {
+	slider < lib.contentElement
+	slider {
+		templateName = Slider
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = image
+				as = images
+			}
+		}
+	}
+}

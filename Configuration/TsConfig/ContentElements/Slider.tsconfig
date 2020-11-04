@@ -1,0 +1,23 @@
+# Custom CE image_grid
+
+mod.wizards.newContentElement.wizardItems.common {
+	elements {
+		slider {
+			iconIdentifier = content-carousel-image
+			title = Slider
+			description = Image Slider
+			tt_content_defValues {
+				CType = slider
+			}
+		}
+	}
+	show := addToList(slider)
+}
+
+
+# Define Preview Fluid Templates for Backend Preview
+/*
+mod.web_layout.tt_content.preview {
+	image_grid = EXT:custom_content_element/Resources/Private/Templates/BackendPreview/General.html
+}
+*/
